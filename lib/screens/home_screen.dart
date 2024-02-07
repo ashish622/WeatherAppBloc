@@ -118,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            '📍 ${state.weather!.areaName}',
+                            '📍 ${state.weather.areaName}, ${state.weather.country}',
                             style: const TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w300
@@ -257,7 +257,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         ),
                                         const SizedBox(height: 3),
                                         Text(
-                                          "${state.weather!.tempMax!.celsius!.round()} °C",
+                                          "${state.weather.tempMax!.celsius!.ceil()} °C",
                                           style: const TextStyle(
                                               color: Colors.white,
                                               fontWeight: FontWeight.w700
@@ -286,7 +286,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         ),
                                         const SizedBox(height: 3),
                                         Text(
-                                          "${state.weather!.tempMin!.celsius!.round()} °C",
+                                          "${state.weather.tempMin!.celsius!.round()} °C",
                                           style: const TextStyle(
                                               color: Colors.white,
                                               fontWeight: FontWeight.w700
